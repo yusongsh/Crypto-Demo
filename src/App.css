@@ -1,38 +1,206 @@
-.App {
-  text-align: center;
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #16151A;
+  color:#F7F5F5;
+  font-weight: bold;
+  font-family: 'Akshar', sans-serif;
+  background-image: url('./assets/light-noise.png');
+  background-repeat: repeat;
+  /* background-size: contain; */
+  padding-bottom: 300px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+/* navbar style */
+.nav {
   display: flex;
-  flex-direction: column;
+  justify-content: space-between;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  margin: 0 auto;
+  width: 90vw;
+  overflow: hidden;
+  margin-top: 40px;
 }
 
-.App-link {
-  color: #61dafb;
+.nav a {
+  font-size: 24px;
+  font-weight: 500;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: #F7F5F5;
 }
 
-@keyframes App-logo-spin {
+
+/* Hero area style */
+#loading {
+  position: absolute;
+  right: 20vw;
+  width: 20vw;
+  height: auto;
+  z-index: -1;
+  animation: rotation 7s infinite linear;
+}
+
+@keyframes rotation {
   from {
-    transform: rotate(0deg);
+      -webkit-transform: rotate(0deg);
   }
   to {
-    transform: rotate(360deg);
+      -webkit-transform: rotate(359deg);
   }
 }
+
+.hero-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 90vw;
+  margin: 60px auto 120px;
+}
+
+.hero-header h1 {
+  font-size: 8.2vw;
+  text-transform: uppercase;
+  z-index: 10;
+}
+
+.hero-content {
+  display: flex;
+  width: 90vw;
+  justify-content: space-between;
+  flex-direction: row;
+}
+
+.hero-content p {
+  margin: 0;
+  width: 40%;
+  font-weight: 300;
+}
+
+.hero-content a {
+  font-size: 24px;
+  font-weight: 500;
+  color: #F7F5F5;
+  text-transform: uppercase;
+}
+
+.marquee {
+  position: relative;
+  width: 100vw;
+  max-width: 100%;
+  height: 200px;
+  overflow-x: hidden;
+  margin-bottom: 120px;
+}
+
+.track {
+  position: absolute;
+  white-space: nowrap;
+  will-change: transform;
+  border-top: 3px solid #F7F5F5;
+  border-bottom: 3px solid #F7F5F5;
+  animation: marquee 80s linear infinite;
+}
+
+.track p {
+  font-size: 48px;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+
+@keyframes marquee {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+
+
+
+
+/* coin search */
+.coin-search {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 120px;
+}
+
+.coin-search h1 {
+  font-size: 64px;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+input {
+  width: 60vw;
+  height: 60px;
+  border-radius: 100px;
+  padding-left: 50px;
+  font-family: 'Akshar', sans-serif;
+  font-size: 18px;
+  font-weight: 300;
+}
+
+
+
+.coin-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.coin-row {
+  background-color: #434246;
+  margin: 5px 0;
+  padding: 0 20px;
+  border-radius: 5px;
+}
+
+.coin-row,
+.coin,
+.coin-data {
+  width: 65vw;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.coin {
+  justify-content: flex-start;
+}
+
+.coin-data {
+  justify-content: space-evenly;
+  font-weight: 300;
+}
+
+.coin img {
+  height: 30px;
+  width: auto;
+  padding-right: 30px;
+}
+
+.coin h1 {
+  font-size: 24px;
+  font-weight: 500;
+}
+
+.coin p {
+  font-size: 24px;
+  font-weight: 300;
+  padding-left: 30px;
+  text-transform: uppercase;
+  color:#3e2e87;
+}
+
+.red {
+  color: red;
+}
+
+.green {
+  color: green
+}
+
+
